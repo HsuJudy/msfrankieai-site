@@ -1,0 +1,8 @@
+# robots.txt for msfrankieai.com
+User-agent: *
+Allow: /
+
+# Block nothing on a single marketing site.
+# (If you add /admin or staging paths later, Disallow them here.)
+
+Sitemap: https://msfrankieai.com/sitemap.xml

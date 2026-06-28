@@ -1,0 +1,13 @@
+{
+  "name": "Ms. Frankie — AI Receptionist for Dental Practices",
+  "short_name": "Ms. Frankie",
+  "description": "AI receptionist for dental practices. Answers every call, books appointments 24/7, HIPAA-conscious.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0B1F3A",
+  "theme_color": "#0E9F8E",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
