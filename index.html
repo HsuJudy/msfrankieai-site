@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Brand (display): "Ms. Frankie". Legal entity: Ms. Frankie AI. Domain: msfrankieai.com. Copy is first-person, in Frankie's voice. -->
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ms. Frankie — The AI Receptionist for Dental Practices</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+--navy:#0b1f3a;--navy2:#13294b;--ink:#0f172a;--body:#475569;--muted:#64748b;
+--teal:#0e9f8e;--teal-d:#0c8275;--gold:#c8a35b;
+--bg:#ffffff;--soft:#f5f7fa;--line:#e6eaf0;--ring:rgba(14,159,142,.18);
+--shadow:0 1px 2px rgba(11,31,58,.04),0 8px 24px rgba(11,31,58,.06);
+--shadow-lg:0 12px 40px rgba(11,31,58,.12);
+--radius:16px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;color:var(--body);background:var(--bg);-webkit-font-smoothing:antialiased;line-height:1.65}
+h1,h2,h3{color:var(--ink);font-weight:600;letter-spacing:-.02em;line-height:1.12}
+.serif{font-family:'Fraunces',Georgia,serif;font-weight:600}
+.wrap{max-width:1120px;margin:0 auto;padding:0 28px}
+a{color:inherit;text-decoration:none}
+.eyebrow{font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--teal-d)}
+
+.topbar{background:var(--navy);color:#cdd9ea;font-size:.84rem;text-align:center;padding:9px 16px;letter-spacing:.01em}
+.topbar b{color:#fff;font-weight:600}
+
+nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.86);backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:70px}
+.brand{display:flex;align-items:center;gap:11px;font-weight:700;font-size:1.22rem;color:var(--navy);letter-spacing:-.02em}
+.brand .mark{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,var(--teal),var(--navy2));display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Fraunces',serif;font-weight:600;font-size:1.05rem}
+.nav-links{display:flex;gap:30px;font-size:.93rem;font-weight:500;color:var(--ink)}
+.nav-links a:hover{color:var(--teal-d)}
+.btn{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:.95rem;padding:12px 22px;border-radius:11px;transition:.18s;cursor:pointer;border:1px solid transparent}
+.btn-primary{background:var(--teal);color:#fff;box-shadow:0 6px 18px rgba(14,159,142,.28)}
+.btn-primary:hover{background:var(--teal-d);transform:translateY(-1px)}
+.btn-ghost{background:#fff;color:var(--navy);border-color:var(--line)}
+.btn-ghost:hover{border-color:var(--teal);color:var(--teal-d)}
+@media(max-width:820px){.nav-links{display:none}}
+
+.hero{position:relative;background:radial-gradient(1200px 500px at 80% -10%,rgba(14,159,142,.10),transparent 60%),linear-gradient(180deg,#fff,#f7f9fc)}
+.hero-in{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;padding:84px 0 76px}
+.hero h1{font-size:3.15rem;color:var(--navy)}
+.hero h1 em{font-style:normal;color:var(--teal-d)}
+.hero p.lead{font-size:1.2rem;color:var(--body);margin:18px 0 30px;max-width:520px}
+.tagline{font-family:'Fraunces',serif;font-style:italic;color:var(--teal-d);font-size:1.12rem;margin-top:14px}
+.foot-brand .tagline{font-size:1rem;margin:4px 0 12px}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.assure{margin-top:22px;font-size:.86rem;color:var(--muted);display:flex;gap:18px;flex-wrap:wrap}
+.assure span{display:flex;align-items:center;gap:7px}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--teal)}
+.panel{background:#fff;border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow-lg);padding:26px;position:relative}
+.panel .row{display:flex;align-items:center;gap:14px;padding:14px;border-radius:13px;background:var(--soft);margin-bottom:12px}
+.panel .row:last-child{margin-bottom:0}
+.avatar{width:42px;height:42px;border-radius:50%;flex:0 0 42px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:600}
+.panel .meta{font-size:.92rem}
+.panel .meta b{color:var(--ink);display:block;font-weight:600}
+.panel .meta small{color:var(--muted)}
+.pill{margin-left:auto;font-size:.74rem;font-weight:700;color:var(--teal-d);background:rgba(14,159,142,.10);padding:5px 10px;border-radius:999px}
+.live{position:absolute;top:-12px;right:22px;background:var(--navy);color:#fff;font-size:.74rem;font-weight:600;padding:7px 13px;border-radius:999px;display:flex;align-items:center;gap:7px}
+.blink{width:8px;height:8px;border-radius:50%;background:#34d399;box-shadow:0 0 0 0 rgba(52,211,153,.6);animation:p 1.6s infinite}
+@keyframes p{0%{box-shadow:0 0 0 0 rgba(52,211,153,.6)}70%{box-shadow:0 0 0 9px rgba(52,211,153,0)}100%{box-shadow:0 0 0 0 rgba(52,211,153,0)}}
+@media(max-width:900px){.hero-in{grid-template-columns:1fr;gap:40px;padding:56px 0}.hero h1{font-size:2.4rem}}
+
+.trust{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#fff}
+.trust-in{padding:26px 0;text-align:center}
+.trust p{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:16px}
+.logos{display:flex;gap:38px;justify-content:center;align-items:center;flex-wrap:wrap;color:#8a97a8;font-weight:700;font-size:1.05rem;letter-spacing:.01em}
+
+section{padding:88px 0}
+.center{text-align:center;max-width:680px;margin:0 auto 54px}
+.center h2{font-size:2.35rem;margin:14px 0 14px;color:var(--navy)}
+.center p{font-size:1.1rem;color:var(--body)}
+
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.feature{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px;transition:.2s}
+.feature:hover{box-shadow:var(--shadow);transform:translateY(-3px);border-color:var(--ring)}
+.ic{width:50px;height:50px;border-radius:13px;background:linear-gradient(135deg,rgba(14,159,142,.14),rgba(19,41,75,.10));display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+.ic svg{width:24px;height:24px;stroke:var(--teal-d);fill:none;stroke-width:1.8}
+.feature h3{font-size:1.18rem;margin-bottom:8px}
+
+.band{background:var(--navy);color:#dbe5f2}
+.band .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;padding:64px 28px;text-align:center}
+.band .num{font-family:'Fraunces',serif;font-size:2.8rem;color:#fff;line-height:1}
+.band .lbl{margin-top:10px;font-size:.95rem;color:#9fb1c9}
+@media(max-width:820px){.grid3{grid-template-columns:1fr}.band .wrap{grid-template-columns:1fr 1fr;gap:36px}}
+
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.scard{position:relative;padding:30px;border-radius:var(--radius);background:var(--soft);border:1px solid var(--line)}
+.scard .n{font-family:'Fraunces',serif;font-size:1.1rem;color:#fff;background:var(--teal);width:40px;height:40px;border-radius:11px;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.scard h3{font-size:1.15rem;margin-bottom:6px}
+
+.sec{background:linear-gradient(180deg,#f7f9fc,#fff)}
+.sec-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:50px;align-items:center}
+.badges{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.badge{display:flex;gap:12px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:13px;padding:18px}
+.badge svg{width:22px;height:22px;stroke:var(--teal-d);fill:none;stroke-width:1.8;flex:0 0 22px;margin-top:2px}
+.badge b{color:var(--ink);font-weight:600;display:block;font-size:.97rem}
+.badge small{color:var(--muted);font-size:.86rem}
+@media(max-width:820px){.steps{grid-template-columns:1fr}.sec-grid{grid-template-columns:1fr;gap:32px}.badges{grid-template-columns:1fr}}
+
+.quote{max-width:820px;margin:0 auto;text-align:center}
+.quote p{font-family:'Fraunces',serif;font-size:1.7rem;line-height:1.4;color:var(--navy)}
+.quote .who{margin-top:22px;font-size:.95rem;color:var(--muted);font-family:'Inter',sans-serif}
+
+details{border-bottom:1px solid var(--line);padding:22px 4px}
+summary{cursor:pointer;font-weight:600;color:var(--ink);font-size:1.05rem;list-style:none;display:flex;justify-content:space-between;align-items:center}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--teal-d);font-size:1.4rem;font-weight:400}
+details[open] summary::after{content:"\2013"}
+details p{margin-top:12px;color:var(--body);max-width:760px}
+
+.final{background:linear-gradient(135deg,var(--navy),var(--navy2));color:#fff;border-radius:24px;text-align:center;padding:66px 28px;box-shadow:var(--shadow-lg)}
+.final h2{color:#fff;font-size:2.2rem}
+.final p{color:#b9c7dc;max-width:520px;margin:14px auto 30px;font-size:1.08rem}
+.final .btn-primary{background:#fff;color:var(--navy)}
+.final .btn-primary:hover{background:#eef2f7}
+
+footer{padding:60px 0 40px;color:var(--muted);font-size:.9rem}
+.foot-in{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:34px}
+.foot-brand{max-width:320px}
+.foot-brand .brand{margin-bottom:12px}
+.foot-cols{display:flex;gap:60px;flex-wrap:wrap}
+.foot-cols h4{font-size:.8rem;text-transform:uppercase;letter-spacing:.1em;color:var(--ink);margin-bottom:14px}
+.foot-cols a{display:block;margin-bottom:9px;color:var(--muted)}
+.foot-cols a:hover{color:var(--teal-d)}
+.legal{margin-top:30px;font-size:.82rem;color:#9aa6b4;border-top:1px solid var(--line);padding-top:20px}
+.disclose{font-size:.82rem;color:#9aa6b4;margin-top:8px}
+</style>
+
+  <meta name="description" content="AI receptionist for dental practices. Ms. Frankie answers every call, books appointments 24/7, and protects patient info with HIPAA-conscious care." />
+  <link rel="canonical" href="https://msfrankieai.com/" />
+  <meta name="theme-color" content="#0E9F8E" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Ms. Frankie" />
+  <meta property="og:title" content="Ms. Frankie — The AI Receptionist for Dental Practices" />
+  <meta property="og:description" content="I answer your phones so you never miss a patient. Always on, always human. Booking 24/7 with HIPAA-conscious care." />
+  <meta property="og:url" content="https://msfrankieai.com/" />
+  <meta property="og:image" content="https://msfrankieai.com/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Ms. Frankie — I answer your phones so you never miss a patient." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ms. Frankie — The AI Receptionist for Dental Practices" />
+  <meta name="twitter:description" content="I answer your phones so you never miss a patient. Always on, always human." />
+  <meta name="twitter:image" content="https://msfrankieai.com/og-image.png" />
+</head>
+<body>
+
+<div class="topbar">I look after your patients' information with <b>HIPAA &amp; PHIPA-conscious care</b>.</div>
+
+<nav>
+<div class="wrap nav-in">
+<a class="brand" href="#"><span class="mark">F</span>Ms. Frankie</a>
+<div class="nav-links">
+<a href="#what">What I do</a>
+<a href="#how">How I work</a>
+<a href="#security">Security</a>
+<a href="#faq">FAQ</a>
+</div>
+<a class="btn btn-primary" href="https://api.leadconnectorhq.com/widget/booking/95xOfXSul6k04MFdAaAy" target="_blank" rel="noopener">Book a demo</a>
+</div>
+</nav>
+
+<header class="hero">
+<div class="wrap hero-in">
+<div>
+<span class="eyebrow">The AI receptionist for dental practices</span>
+<h1 class="serif">Hi, I'm Ms. Frankie. I answer your phones — so you <em>never miss a patient.</em></h1>
+<p class="tagline">Always on, always human.</p>
+<p class="lead">I pick up every call, book appointments around the clock, and make sure no one ever reaches a voicemail. Think of me as the front-desk teammate who never takes a day off.</p>
+<div class="hero-cta">
+<a class="btn btn-primary" href="https://api.leadconnectorhq.com/widget/booking/95xOfXSul6k04MFdAaAy" target="_blank" rel="noopener">Book a demo</a>
+<a class="btn btn-ghost" href="#how">See how I work</a>
+</div>
+<div class="assure">
+<span><i class="dot"></i> I'm live in days</span>
+<span><i class="dot"></i> I work with your software</span>
+<span><i class="dot"></i> No new hardware</span>
+</div>
+</div>
+
+<div class="panel">
+<div class="live"><i class="blink"></i> Call in progress</div>
+<div class="row">
+<div class="avatar" style="background:#13294b">F</div>
+<div class="meta"><b>Ms. Frankie</b><small>“Thanks for calling! I can get you booked — does Tuesday at 2pm work?”</small></div>
+</div>
+<div class="row">
+<div class="avatar" style="background:#0e9f8e">PT</div>
+<div class="meta"><b>Patient</b><small>“Yes, that's perfect.”</small></div>
+<span class="pill">Booked</span>
+</div>
+<div class="row">
+<div class="avatar" style="background:#c8a35b">✓</div>
+<div class="meta"><b>Appointment created</b><small>Synced to your schedule · confirmation sent</small></div>
+</div>
+</div>
+</div>
+</header>
+
+<div class="trust">
+<div class="wrap trust-in">
+<p>Designed to work with the systems you already use</p>
+<div class="logos">
+<span>Dentrix</span><span>Open Dental</span><span>Eaglesoft</span><span>Curve</span>
+</div>
+</div>
+</div>
+
+<section id="what">
+<div class="wrap">
+<div class="center">
+<span class="eyebrow">What I do</span>
+<h2 class="serif">Your front desk, covered — every hour of every day</h2>
+<p>Everything a wonderful receptionist does on the phone, I handle instantly and consistently. Here's how I help.</p>
+</div>
+<div class="grid3">
+<div class="feature">
+<div class="ic"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+<h3>I answer every call</h3>
+<p>I pick up on the first ring, day or night, in a warm voice your patients will love. No hold music, no missed new patients.</p>
+</div>
+<div class="feature">
+<div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
+<h3>I book your patients</h3>
+<p>I check your real availability and schedule patients on the spot — then send confirmations and reminders so they actually show up.</p>
+</div>
+<div class="feature">
+<div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2z"/><path d="M12 6v6l4 2"/></svg></div>
+<h3>I never lose a lead</h3>
+<p>I answer common questions, take detailed messages, and flag urgent calls for your team — so nothing, and no one, slips through.</p>
+</div>
+</div>
+</div>
+</section>
+
+<div class="band">
+<div class="wrap">
+<div><div class="num">35%+</div><div class="lbl">of practice calls go unanswered at peak times — not on my watch</div></div>
+<div><div class="num">24/7</div><div class="lbl">I answer, book &amp; cover after-hours</div></div>
+<div><div class="num">&lt;1 min</div><div class="lbl">average wait when I'm on the line</div></div>
+<div><div class="num">Days</div><div class="lbl">to get me live — not months</div></div>
+</div>
+</div>
+
+<section id="how">
+<div class="wrap">
+<div class="center">
+<span class="eyebrow">How I work</span>
+<h2 class="serif">Getting me started takes three steps</h2>
+</div>
+<div class="steps">
+<div class="scard"><div class="n">1</div><h3>Connect me</h3><p>Link me to your phone line and practice software — nothing to rip out, and no new hardware to buy.</p></div>
+<div class="scard"><div class="n">2</div><h3>Teach me</h3><p>Tell me your services, hours, providers, and booking rules so I sound just like your practice.</p></div>
+<div class="scard"><div class="n">3</div><h3>Let me answer</h3><p>I start taking calls right away — and you watch the missed-call gap close.</p></div>
+</div>
+</div>
+</section>
+
+<section style="background:#f7f9fc;padding-top:72px;padding-bottom:72px">
+<div class="wrap center" style="margin-bottom:0">
+<span class="eyebrow">For teaching &amp; academic clinics</span>
+<h2 class="serif" style="margin:14px 0 14px">Preparing students for the future of dentistry</h2>
+<p>AI is advancing faster than ever — and in dental schools and teaching clinics, I do more than answer phones. I give students real, hands-on exposure to the same AI tools reshaping the profession, so they graduate ready for the workforce they're walking into.</p>
+</div>
+</section>
+
+<section id="security" class="sec">
+<div class="wrap sec-grid">
+<div>
+<span class="eyebrow">Security &amp; compliance</span>
+<h2 class="serif" style="font-size:2.2rem;margin:14px 0 14px">I protect your patients' information</h2>
+<p>Your patients trust you with sensitive details — and I treat every one of them with clinical-grade care. Security should never be the reason a decision stalls, so I'm built to meet what institutional and private clinics expect.</p>
+</div>
+<div class="badges">
+<div class="badge"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><div><b>HIPAA &amp; PHIPA-aware</b><small>Designed around clinic privacy rules</small></div></div>
+<div class="badge"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><div><b>Encrypted end to end</b><small>Protected with strong encryption in transit and at rest</small></div></div>
+<div class="badge"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 15l2 2 4-4"/></svg><div><b>Every call logged</b><small>A clear record of calls, lookups &amp; bookings</small></div></div>
+<div class="badge"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg><div><b>Controlled access</b><small>Role-based access controls</small></div></div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="wrap quote">
+<span class="eyebrow">My promise</span>
+<p class="serif" style="margin-top:18px">“Every call answered. Every patient booked. Every message captured. That's my promise to your front desk — around the clock, without fail.”</p>
+<div class="who">— Ms. Frankie</div>
+</div>
+</section>
+
+<section id="faq" style="padding-top:30px">
+<div class="wrap" style="max-width:840px">
+<div class="center"><span class="eyebrow">FAQ</span><h2 class="serif">A few things you might be wondering</h2></div>
+<details open><summary>Will you work with our current phone system and software?</summary><p>Yes. I connect to your existing phone line and I'm built to work with the major practice management systems — so there's nothing to rip out or replace.</p></details>
+<details><summary>How do you protect patient information?</summary><p>I encrypt everything in transit and at rest, log every interaction, and limit access by role. I'm built around the privacy principles behind HIPAA and PHIPA.</p></details>
+<details><summary>How long until you're answering our calls?</summary><p>Most practices have me live within days. My team handles the setup around your services, hours, providers, and booking rules.</p></details>
+<details><summary>What happens with urgent or complicated calls?</summary><p>I recognize urgent situations and route or escalate them by your rules, and I always capture a detailed message so your team can follow up fast.</p></details>
+</div>
+</section>
+
+<section style="padding-top:20px">
+<div class="wrap">
+<div class="final" id="contact">
+<h2 class="serif">Want to hear me answer your phones?</h2>
+<p>Book a 15-minute demo and listen to me handle a real patient call, start to finish.</p>
+<a class="btn btn-primary" href="https://api.leadconnectorhq.com/widget/booking/95xOfXSul6k04MFdAaAy" target="_blank" rel="noopener">Book a demo</a>
+</div>
+</div>
+</section>
+
+<footer>
+<div class="wrap">
+<div class="foot-in">
+<div class="foot-brand">
+<a class="brand" href="#"><span class="mark">F</span>Ms. Frankie</a>
+<p class="tagline">Always on, always human.</p>
+<p>I'm the AI receptionist for modern dental practices. I answer every call, book every patient, and never miss a beat.</p>
+<p class="disclose">Ms. Frankie is an AI voice assistant.</p>
+</div>
+<div class="foot-cols">
+<div>
+<h4>About me</h4>
+<a href="#what">What I do</a>
+<a href="#how">How I work</a>
+<a href="#security">Security</a>
+</div>
+<div>
+<h4>Get in touch</h4>
+<a href="#faq">FAQ</a>
+<a href="mailto:judy98122@gmail.com">Contact</a>
+<a href="https://api.leadconnectorhq.com/widget/booking/95xOfXSul6k04MFdAaAy" target="_blank" rel="noopener">Book a demo</a>
+</div>
+<div>
+<h4>Legal</h4>
+<a href="#">Privacy Policy</a>
+<a href="#">Terms of Service</a>
+
+</div>
+</div>
+</div>
+<div class="wrap legal" style="padding-left:0;padding-right:0">© <span id="y"></span> Ms. Frankie AI · msfrankieai.com · All rights reserved.</div>
+</div>
+</footer>
+<script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://msfrankieai.com/#organization","name":"Ms. Frankie","alternateName":"Ms. Frankie AI","url":"https://msfrankieai.com/","logo":"https://msfrankieai.com/icon-512.png","image":"https://msfrankieai.com/og-image.png","description":"AI voice receptionist for dental practices. Answers every call, books appointments 24/7, and handles patient information with HIPAA-conscious care.","email":"hello@msfrankieai.com","founder":{"@type":"Person","name":"Judy Hsu"}},{"@type":"Service","@id":"https://msfrankieai.com/#service","name":"AI Dental Receptionist","serviceType":"AI voice receptionist and appointment booking for dental practices","provider":{"@id":"https://msfrankieai.com/#organization"},"areaServed":"US","description":"A 24/7 AI receptionist that answers every call, books patients, sends confirmations and reminders, captures messages, and flags urgent calls."},{"@type":"FAQPage","@id":"https://msfrankieai.com/#faq","mainEntity":[{"@type":"Question","name":"Will you work with our current phone system and software?","acceptedAnswer":{"@type":"Answer","text":"Yes. I connect to your existing phone line and I'm built to work with the major practice management systems — so there's nothing to rip out or replace."}},{"@type":"Question","name":"How do you protect patient information?","acceptedAnswer":{"@type":"Answer","text":"I'm designed around clinic privacy rules with HIPAA-conscious care. Patient information is encrypted in transit and at rest, every call, lookup, and booking is logged, and access is controlled with role-based permissions."}},{"@type":"Question","name":"How long until you're answering our calls?","acceptedAnswer":{"@type":"Answer","text":"Days, not months: connect me to your phone line and software, teach me your services and booking rules, then I start taking calls right away."}},{"@type":"Question","name":"What happens with urgent or complicated calls?","acceptedAnswer":{"@type":"Answer","text":"I answer common questions, take detailed messages, and flag urgent or complex calls for your team so nothing — and no one — slips through."}}]}]}</script><script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6a416537048e1580e8f0add2" data-source="WEB_USER"></script></body>
+</html>
