@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Missed-Call Cost Calculator — Ms. Frankie</title>
+<meta name="description" content="Enter three numbers and see what unanswered calls are costing your dental practice every month in lost new patients. Free, instant, no sign-up.">
+<link rel="canonical" href="https://msfrankieai.com/resources/missed-call-calculator.html">
+<meta name="theme-color" content="#0B1F3A">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Missed-Call Cost Calculator — Ms. Frankie">
+<meta property="og:description" content="See what unanswered calls cost your practice every month. Free, instant.">
+<meta property="og:url" content="https://msfrankieai.com/resources/missed-call-calculator.html">
+<meta property="og:image" content="https://msfrankieai.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230B1F3A'/%3E%3Ctext x='50%25' y='50%25' dy='.06em' text-anchor='middle' dominant-baseline='middle' font-family='Georgia,serif' font-size='38' font-weight='700' fill='%230E9F8E'%3EF%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--navy:#0B1F3A;--navy-2:#0e2647;--teal:#0E9F8E;--teal-d:#0b8375;--ink:#0B1F3A;--muted:#5b6b7b;--line:#e6ecef;--bg:#fff;--bg-soft:#f5f9f8}
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--bg-soft);line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:Fraunces,Georgia,serif;line-height:1.12;margin:0 0 .4em}
+  h1{font-size:clamp(1.9rem,4.4vw,2.9rem);font-weight:600;letter-spacing:-.4px}
+  a{color:inherit}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+  .accent{color:var(--teal)}
+  .eyebrow{font-weight:700;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);margin-bottom:.5rem}
+  .btn{display:inline-block;font-weight:600;padding:12px 22px;border-radius:999px;text-decoration:none;border:0;cursor:pointer;font-size:.98rem;font-family:inherit}
+  .btn-primary{background:var(--teal);color:#fff}.btn-primary:hover{background:var(--teal-d)}
+  .btn-ghost{background:#fff;color:var(--navy);border:1.5px solid var(--line)}.btn-ghost:hover{border-color:var(--teal);color:var(--teal)}
+  header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:66px}
+  .brand{display:flex;align-items:center;gap:10px;font-family:Fraunces;font-weight:600;font-size:1.2rem;text-decoration:none}
+  .mark{width:36px;height:36px;border-radius:10px;background:var(--navy);color:var(--teal);display:grid;place-items:center;font-family:Fraunces;font-weight:700}
+  .back{color:var(--muted);text-decoration:none;font-size:.92rem;font-weight:500}.back:hover{color:var(--navy)}
+  .top{padding:44px 0 8px}
+  .lead{font-size:1.1rem;color:var(--muted);max-width:60ch}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:start;padding:26px 0 50px}
+  @media(max-width:820px){.grid{grid-template-columns:1fr}}
+  .panel{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px}
+  .calc label{display:block;font-weight:600;font-size:.92rem;margin:14px 0 5px}
+  .calc input{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:10px;font-size:1rem;font-family:inherit}
+  .calc .note{color:var(--muted);font-size:.82rem;margin:6px 0 0}
+  .result{position:sticky;top:84px;background:var(--navy);color:#fff;border-radius:18px;padding:28px;text-align:center}
+  .result small{color:#b9c7d3}
+  .result .big{font-family:Fraunces;font-size:clamp(2.4rem,6vw,3.2rem);color:var(--teal);display:block;line-height:1.05;margin:6px 0}
+  .result .yr{color:#c3d0da;font-size:.95rem;margin-top:4px}
+  .gate{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px;margin-top:18px}
+  .gate p{margin:0 0 10px;font-weight:600}
+  .gate .row{display:flex;gap:8px;flex-wrap:wrap}
+  .gate input[type=email]{flex:1;min-width:170px;padding:12px 14px;border:1px solid var(--line);border-radius:10px;font-size:1rem;font-family:inherit}
+  .fine{color:var(--muted);font-size:.8rem;margin:8px 0 0}
+  .band{background:#fff;border-top:1px solid var(--line)}.band .wrap{padding:44px 22px;text-align:center}
+  footer{background:var(--navy);color:#8ba0b1;text-align:center;font-size:.85rem;padding:26px 22px}
+  footer a{color:#b9c7d3}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a href="../index.html" class="brand"><span class="mark">F</span> Ms. Frankie</a>
+    <a href="../resources.html" class="back">← All resources</a>
+  </div>
+</header>
+
+<div class="top">
+  <div class="wrap">
+    <div class="eyebrow">Free · 2-minute number</div>
+    <h1>What are missed calls <span class="accent">really costing you?</span></h1>
+    <p class="lead">Most practices miss about 1 in 3 calls at peak and after hours — and never know what walked out the door. Enter three numbers and see yours.</p>
+  </div>
+</div>
+
+<div class="wrap grid">
+  <div class="panel calc">
+    <label for="calls">New-patient calls per day</label>
+    <input id="calls" type="number" value="12" min="0">
+    <label for="missed">% missed at peak / after hours</label>
+    <input id="missed" type="number" value="35" min="0" max="100">
+    <p class="note">Industry studies put this near 35% at busy practices.</p>
+    <label for="ltv">Average new-patient value ($)</label>
+    <input id="ltv" type="number" value="1200" min="0">
+    <p class="note">A conservative lifetime value — adjust to your practice.</p>
+  </div>
+  <div>
+    <div class="result">
+      <small>You're leaving about</small>
+      <span class="big" id="loss">$—</span>
+      <small>on the table every month in missed new patients.</small>
+      <div class="yr" id="yr"></div>
+    </div>
+    <div class="gate">
+      <p>Want the full breakdown + the 3 fastest ways to plug the leak?</p>
+      <form class="row" onsubmit="return false" data-tag="lead-magnet:missed-call">
+        <input type="email" placeholder="you@yourpractice.com" aria-label="Email" required>
+        <button class="btn btn-primary" type="submit">Send me the breakdown</button>
+      </form>
+      <p class="fine">No spam. Just the breakdown and the occasional note from me, Ms. Frankie. Unsubscribe anytime.</p>
+    </div>
+  </div>
+</div>
+
+<div class="band">
+  <div class="wrap">
+    <h2 style="font-family:Fraunces;font-weight:600;font-size:1.7rem">Want to hear me answer instead?</h2>
+    <p class="lead" style="margin:0 auto 18px">Call the live line and hear me handle a real patient call — start to finish.</p>
+    <a href="tel:+19498681663" class="btn btn-primary">☎ (949) 868-1663</a>
+    <a href="../index.html" class="btn btn-ghost">See how I work</a>
+  </div>
+</div>
+
+<footer>© 2026 Ms. Frankie AI · <a href="../index.html">msfrankieai.com</a> · Always on, always human.</footer>
+
+<script>
+  function money(n){return '$'+Math.round(n).toLocaleString();}
+  function calc(){
+    var calls=+document.getElementById('calls').value||0;
+    var missed=(+document.getElementById('missed').value||0)/100;
+    var ltv=+document.getElementById('ltv').value||0;
+    var perMonth=calls*missed*22*ltv;
+    document.getElementById('loss').textContent=money(perMonth);
+    document.getElementById('yr').textContent='That’s about '+money(perMonth*12)+' a year.';
+  }
+  ['calls','missed','ltv'].forEach(function(id){document.getElementById(id).addEventListener('input',calc);});
+  calc();
+</script>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Front-Desk Reality Check — Ms. Frankie</title>
+<meta name="description" content="A 2-minute interactive checklist: see how much of your front desk's week is quietly eaten by the phones — and how many hours you could reclaim.">
+<link rel="canonical" href="https://msfrankieai.com/resources/front-desk-checklist.html">
+<meta name="theme-color" content="#0B1F3A">
+<meta property="og:type" content="website">
+<meta property="og:title" content="The Front-Desk Reality Check — Ms. Frankie">
+<meta property="og:description" content="See how many hours a week your front desk loses to the phones — and how many you could reclaim. 2-minute interactive checklist.">
+<meta property="og:url" content="https://msfrankieai.com/resources/front-desk-checklist.html">
+<meta property="og:image" content="https://msfrankieai.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230B1F3A'/%3E%3Ctext x='50%25' y='50%25' dy='.06em' text-anchor='middle' dominant-baseline='middle' font-family='Georgia,serif' font-size='38' font-weight='700' fill='%230E9F8E'%3EF%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--navy:#0B1F3A;--navy-2:#0e2647;--teal:#0E9F8E;--teal-d:#0b8375;--amber:#E8A33D;--red:#E0674C;--ink:#0B1F3A;--muted:#5b6b7b;--line:#e6ecef;--bg:#fff;--bg-soft:#f5f9f8}
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--bg-soft);line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:Fraunces,Georgia,serif;line-height:1.12;margin:0 0 .4em}
+  h1{font-size:clamp(1.9rem,4.4vw,2.9rem);font-weight:600;letter-spacing:-.4px}
+  a{color:inherit}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+  .accent{color:var(--teal)}
+  .eyebrow{font-weight:700;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);margin-bottom:.5rem}
+  .btn{display:inline-block;font-weight:600;padding:12px 22px;border-radius:999px;text-decoration:none;border:0;cursor:pointer;font-size:.98rem;font-family:inherit}
+  .btn-primary{background:var(--teal);color:#fff}.btn-primary:hover{background:var(--teal-d)}
+  .btn-ghost{background:#fff;color:var(--navy);border:1.5px solid var(--line)}.btn-ghost:hover{border-color:var(--teal);color:var(--teal)}
+  /* header */
+  header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:66px}
+  .brand{display:flex;align-items:center;gap:10px;font-family:Fraunces;font-weight:600;font-size:1.2rem;text-decoration:none}
+  .mark{width:36px;height:36px;border-radius:10px;background:var(--navy);color:var(--teal);display:grid;place-items:center;font-family:Fraunces;font-weight:700}
+  .back{color:var(--muted);text-decoration:none;font-size:.92rem;font-weight:500}
+  .back:hover{color:var(--navy)}
+  /* hero */
+  .top{padding:44px 0 8px}
+  .lead{font-size:1.1rem;color:var(--muted);max-width:60ch}
+  /* layout */
+  .grid{display:grid;grid-template-columns:1.5fr .9fr;gap:26px;align-items:start;padding:26px 0 60px}
+  @media(max-width:880px){.grid{grid-template-columns:1fr}}
+  .panel{background:#fff;border:1px solid var(--line);border-radius:18px;padding:8px 22px 20px}
+  .groupname{font-weight:700;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:20px 0 6px;padding-top:14px;border-top:1px solid var(--line)}
+  .groupname:first-of-type{border-top:0;padding-top:4px}
+  .item{display:flex;gap:14px;align-items:flex-start;padding:12px 10px;border-radius:12px;cursor:pointer;transition:.12s}
+  .item:hover{background:var(--bg-soft)}
+  .item input{appearance:none;-webkit-appearance:none;width:26px;height:26px;border:2px solid #cdd8de;border-radius:8px;flex:0 0 26px;margin-top:1px;cursor:pointer;position:relative;transition:.12s}
+  .item input:checked{background:var(--teal);border-color:var(--teal)}
+  .item input:checked::after{content:"✓";color:#fff;position:absolute;inset:0;display:grid;place-items:center;font-size:.9rem;font-weight:700}
+  .item .txt{font-weight:500}
+  .item .hint{color:var(--muted);font-size:.86rem;font-weight:400}
+  .item.checked{background:#eefaf7}
+  /* results (sticky) */
+  .results{position:sticky;top:84px;background:var(--navy);color:#fff;border-radius:18px;padding:26px;text-align:center}
+  .ring{width:150px;height:150px;margin:6px auto 10px;position:relative}
+  .ring svg{transform:rotate(-90deg)}
+  .ring .num{position:absolute;inset:0;display:grid;place-items:center;font-family:Fraunces;font-size:2.2rem;font-weight:700}
+  .verdict{font-family:Fraunces;font-size:1.25rem;font-weight:600;margin:6px 0}
+  .hours{background:var(--navy-2);border:1px solid #1c3556;border-radius:12px;padding:14px;margin:14px 0}
+  .hours b{font-family:Fraunces;font-size:1.8rem;color:var(--teal);display:block;line-height:1.1}
+  .hours span{color:#b9c7d3;font-size:.86rem}
+  .rmsg{color:#c3d0da;font-size:.92rem;min-height:2.6em}
+  .gate{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px;margin-top:18px}
+  .gate p{margin:0 0 10px;font-weight:600}
+  .gate .row{display:flex;gap:8px;flex-wrap:wrap}
+  .gate input[type=email]{flex:1;min-width:170px;padding:11px 13px;border:1px solid var(--line);border-radius:10px;font-size:1rem;font-family:inherit}
+  .fine{color:var(--muted);font-size:.8rem;margin:8px 0 0}
+  .actions{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap;justify-content:center}
+  .linky{background:none;border:0;color:#b9c7d3;font-size:.85rem;cursor:pointer;text-decoration:underline;font-family:inherit}
+  .linky:hover{color:#fff}
+  /* cta band */
+  .band{background:#fff;border-top:1px solid var(--line)}
+  .band .wrap{padding:44px 22px;text-align:center}
+  footer{background:var(--navy);color:#8ba0b1;text-align:center;font-size:.85rem;padding:26px 22px}
+  footer a{color:#b9c7d3}
+  @media print{header,.gate,.band,footer,.back{display:none}.results{position:static;color:#000;background:#fff;border:1px solid #ccc}.item input:checked{outline:2px solid #000}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a href="../index.html" class="brand"><span class="mark">F</span> Ms. Frankie</a>
+    <a href="../resources.html" class="back">← All resources</a>
+  </div>
+</header>
+
+<div class="top">
+  <div class="wrap">
+    <div class="eyebrow">Free · 2-minute front-desk reality check</div>
+    <h1>How much of your front desk's week <span class="accent">disappears into the phones?</span></h1>
+    <p class="lead">Tick every one that happens at your practice. As you go, you'll see a live front-desk load score and roughly how many hours a week you could hand off. Honest answers give the truest number.</p>
+  </div>
+</div>
+
+<div class="wrap grid">
+  <!-- checklist -->
+  <div class="panel" id="list">
+    <div class="groupname">On the phones</div>
+    <label class="item"><input type="checkbox" data-h="1.5"><span><span class="txt">Calls roll to voicemail during the morning rush.</span><br><span class="hint">Peak hours are exactly when new patients call.</span></span></label>
+    <label class="item"><input type="checkbox" data-h="2"><span><span class="txt">New-patient calls come in after hours or weekends with no one to answer.</span><br><span class="hint">Roughly half of new-patient calls happen when you're closed.</span></span></label>
+    <label class="item"><input type="checkbox" data-h="1"><span><span class="txt">Staff stop mid check-in to grab a ringing phone.</span><br><span class="hint">The patient in front of them waits.</span></span></label>
+    <label class="item"><input type="checkbox" data-h="1"><span><span class="txt">Callers hang up instead of leaving a voicemail.</span><br><span class="hint">Most first-time callers just dial the next practice.</span></span></label>
+
+    <div class="groupname">Booking &amp; follow-up</div>
+    <label class="item"><input type="checkbox" data-h="1.5"><span><span class="txt">Someone manually calls to confirm tomorrow's appointments.</span></span></label>
+    <label class="item"><input type="checkbox" data-h="1"><span><span class="txt">You play phone tag to reschedule cancellations.</span></span></label>
+    <label class="item"><input type="checkbox" data-h="1"><span><span class="txt">Last-minute openings get filled by hand, if at all.</span></span></label>
+    <label class="item"><input type="checkbox" data-h="1.5"><span><span class="txt">The same FAQs (hours, insurance, location) get answered over and over.</span></span></label>
+
+    <div class="groupname">Overflow &amp; admin</div>
+    <label class="item"><input type="checkbox" data-h="0.5"><span><span class="txt">Messages get taken on sticky notes and sometimes lost.</span></span></label>
+    <label class="item"><input type="checkbox" data-h="1"><span><span class="txt">You chase patients for forms and paperwork.</span></span></label>
+    <label class="item"><input type="checkbox" data-h="1"><span><span class="txt">After-hours messages pile up for Monday morning.</span></span></label>
+    <label class="item"><input type="checkbox" data-h="1"><span><span class="txt">The front desk stays late or eats lunch to catch up.</span></span></label>
+  </div>
+
+  <!-- results -->
+  <div>
+    <div class="results">
+      <div style="font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:#9db0c0;font-weight:700">Front-desk load</div>
+      <div class="ring">
+        <svg width="150" height="150" viewbox="0 0 150 150">
+          <circle cx="75" cy="75" r="66" fill="none" stroke="#1c3556" stroke-width="12"></circle>
+          <circle id="arc" cx="75" cy="75" r="66" fill="none" stroke="#0E9F8E" stroke-width="12" stroke-linecap="round" stroke-dasharray="414.7" stroke-dashoffset="414.7"></circle>
+        </svg>
+        <div class="num" id="pct">0%</div>
+      </div>
+      <div class="verdict" id="verdict">Start ticking →</div>
+      <div class="hours"><b id="hrs">0 hrs</b><span>a week Ms. Frankie could take off your front desk's plate</span></div>
+      <div class="rmsg" id="rmsg">Every box you tick is time your team spends on the phone instead of with the patient in the chair.</div>
+      <div class="actions">
+        <button class="linky" onclick="window.print()">🖨 Print my results</button>
+        <button class="linky" id="reset">Reset</button>
+      </div>
+    </div>
+
+    <div class="gate">
+      <p>Want the full checklist as a PDF — plus exactly how each of these gets handled automatically?</p>
+      <form class="row" onsubmit="return false" data-tag="lead-magnet:frontdesk">
+        <input type="email" placeholder="you@yourpractice.com" aria-label="Email" required>
+        <button class="btn btn-primary" type="submit">Send it to me</button>
+      </form>
+      <p class="fine">No spam — just the PDF and the occasional note from me, Ms. Frankie. Unsubscribe anytime.</p>
+    </div>
+  </div>
+</div>
+
+<div class="band">
+  <div class="wrap">
+    <h2 style="font-family:Fraunces;font-weight:600;font-size:1.7rem">Rather just hear the fix?</h2>
+    <p class="lead" style="margin:0 auto 18px">Call the live line and hear me answer a real patient call — or book a 15-minute demo.</p>
+    <a href="tel:+19498681663" class="btn btn-ghost">☎ (949) 868-1663</a>
+    <a href="../index.html" class="btn btn-primary">Book a demo</a>
+  </div>
+</div>
+
+<footer>© 2026 Ms. Frankie AI · <a href="../index.html">msfrankieai.com</a> · Always on, always human.</footer>
+
+<script>
+  var boxes=[].slice.call(document.querySelectorAll('#list input'));
+  var TOTAL=boxes.length, CIRC=2*Math.PI*66;
+  var arc=document.getElementById('arc'), pctEl=document.getElementById('pct'),
+      verdict=document.getElementById('verdict'), hrsEl=document.getElementById('hrs'),
+      rmsg=document.getElementById('rmsg');
+  var bands=[
+    {min:0,  c:'#0E9F8E', v:'Holding the line',       m:"Your front desk is keeping up — but even a few of these add up over a week."},
+    {min:25, c:'#0E9F8E', v:'A few leaks to plug',      m:"Solid, with some obvious time drains worth handing off."},
+    {min:50, c:'#E8A33D', v:'Stretched thin',           m:"Your front desk is spending real hours on the phones instead of with patients."},
+    {min:75, c:'#E0674C', v:'Drowning in calls',        m:"This is a lot for any front desk to carry. Most of it can be automated away."}
+  ];
+  function update(){
+    var checked=boxes.filter(b=>b.checked);
+    var pct=Math.round(checked.length/TOTAL*100);
+    var hrs=checked.reduce((s,b)=>s+parseFloat(b.dataset.h),0);
+    arc.style.strokeDashoffset = CIRC*(1-pct/100);
+    pctEl.textContent=pct+'%';
+    var band=bands[0];
+    for(var i=0;i<bands.length;i++){ if(pct>=bands[i].min) band=bands[i]; }
+    arc.style.stroke=band.c; pctEl.style.color=band.c; verdict.textContent=band.v;
+    verdict.style.color=band.c; rmsg.textContent=band.m;
+    hrsEl.textContent=(Math.round(hrs*2)/2)+' hrs';
+    boxes.forEach(b=>b.closest('.item').classList.toggle('checked',b.checked));
+  }
+  boxes.forEach(b=>b.addEventListener('change',update));
+  document.getElementById('reset').addEventListener('click',function(){boxes.forEach(b=>b.checked=false);update();});
+  update();
+</script>
+</body>
+</html>
